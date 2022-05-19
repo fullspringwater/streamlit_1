@@ -33,14 +33,14 @@ def main() :
             print(upload_file.size)
             print(upload_file.type)
         
-        # 파일명을 유니크하게 만들어서 저장해야 한다.
-        # 현재시간을 활용해서, 파일명을 만든다.
-        current_time = datetime.now()
-        print(current_time.isoformat().replace(':', '_'))
-        new_filename = current_time.isoformat().replace(':', '_') + '.jpg'
+            # 파일명을 유니크하게 만들어서 저장해야 한다.
+            # 현재시간을 활용해서, 파일명을 만든다.
+            current_time = datetime.now()
+            print(current_time.isoformat().replace(':', '_'))
+            new_filename = current_time.isoformat().replace(':', '_') + '.jpg'
 
-        upload_file.name = new_filename
-        save_uploaded_file('temp', upload_file)
+            upload_file.name = new_filename
+            save_uploaded_file('temp', upload_file)
         
 
     elif choice == menu[1]:
